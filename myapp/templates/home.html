@@ -1,0 +1,55 @@
+<!doctype html>
+<html>
+<head>
+ <meta charset="UTF-8">
+ <meta name="viewport" content="width=device-width, initial-scale=1.0">
+ <script src="https://cdn.tailwindcss.com"></script>
+ <style>
+   body {
+       background-image: url('https://www.wesleybaker.com/wp-content/uploads/2021/07/How-Fish-Farming-Is-Growing.jpg');
+       background-repeat: no-repeat;
+       background-size: cover;
+       display: flex;
+       justify-content: center;
+       align-items: center;
+       margin: auto;
+   }
+   </style>
+</head>
+<body>
+ <div class="w-full  max-w-md mx-auto p-6" >
+   <div class="mt-7 bg-blue-400  rounded-xl shadow-lg dark:bg-gray-800 dark:border-gray-700 border-2 border-indigo-300">
+       <div class="p-4 sm:p-7">
+           <div class="text-center">
+               <div class='flex justify-center mb-0'>
+               </div>
+               <h1 class="block text-2xl font-bold text-gray-800 dark:text-white">Create New Password</h1>
+               <p class="mt-2 text-sm text-gray-600 dark:text-gray-400">
+                   Remember your password?
+                   <a class="text-blue-600 decoration-2 hover:underline font-medium" href="/">
+                       Login here
+                   </a>
+               </p>
+           </div>
+          {%  if msg %}
+          <p>{{msg}}</p>
+          {%  endif %}
+           <div class="mt-5">
+               <form method="post">
+                   <div class="grid gap-y-4">
+                       <div>
+                           <label htmlFor="email" class="block text-sm font-bold ml-1 mb-2 dark:text-white">New Password</label>
+                           <div class="relative">
+                               <input type="text" id="email" class="py-3 px-4 block w-full border-2 border-gray-200 rounded-md text-sm focus:border-blue-500 focus:ring-blue-500 shadow-sm" required aria-describedby="email-error" placeholder='Enter new password' name="password"/>
+                           </div>
+                           <p class="hidden text-xs text-red-600 mt-2" id="email-error">Please include a valid email address so we can get back to you</p>
+                       </div>
+                       <button type="submit" class="py-3 px-4 inline-flex justify-center items-center gap-2 rounded-md border border-transparent font-semibold bg-blue-500 text-white hover:bg-blue-600 focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2 transition-all text-sm dark:focus:ring-offset-gray-800">Change password</button>
+                   </div>
+               </form>
+           </div>
+       </div>
+   </div>
+</div>
+</body>
+</html>
